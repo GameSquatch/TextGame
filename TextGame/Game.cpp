@@ -92,7 +92,8 @@ void Game::inputMenuChoice(unsigned short int& choice) {
         getline(std::cin, input);
         
         ss.str(input);
-        std::cout << ss.str() << std::endl;
+        std::cout << std::endl;
+        
         if (input == "" || !(ss >> choice)) {
             std::cout << "\n****Please enter a number****" << std::endl << ">> ";
             failFlag = true;
@@ -114,7 +115,7 @@ void Game::evaluateChoice(unsigned short int choice) {
 
 void Game::showPlayerStatus() const {
     //show vital things like location
-    std::cout << "-------Vital Info------" << std::endl;
+    std::cout << "\n-------Vital Info------" << std::endl;
     
     player.showVitalInfo();
     

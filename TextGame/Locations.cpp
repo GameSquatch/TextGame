@@ -35,7 +35,7 @@ void Locations::addDynamicOption(Option* option) {
 }
 
 void Locations::showOptions() const {
-    std::cout << "Options\n";
+    std::cout << "\nOptions\n";
     
     for (unsigned short int i = 0; i < dynamicOptions.size(); ++i) {
         std::cout << (i + 1) << ". " << dynamicOptions[i]->getOutputText() << std::endl;
