@@ -16,4 +16,7 @@ FightEnemiesOption::FightEnemiesOption(std::string outputText)
 
 void FightEnemiesOption::Evaluate(Player& player) {
     Locations* currentLocation = player.getCurrentLocation();
+    
+    
+    
 }

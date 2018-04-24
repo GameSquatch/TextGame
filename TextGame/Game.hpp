@@ -46,6 +46,7 @@ public://member functions
     void showOptions();
     void inputMenuChoice(unsigned short int& choice);
     void evaluateChoice(unsigned short int choice);
+    void showPlayerStatus() const;
     
 public://constructor/destructor
     Game();

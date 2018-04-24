@@ -39,6 +39,7 @@ public:
     void initialize();
     void setLocation(Locations* location);
     Locations* getCurrentLocation() const;
+    void showVitalInfo() const;
     
     void showStats() const;
     

@@ -66,9 +66,11 @@ void Game::runGame() {
         //show options
         showOptions();
         inputMenuChoice(choice);
-        std::cout << "\nYou chose " << choice << "!\n" << std::endl;
+        //std::cout << "\nYou chose " << choice << "!\n" << std::endl;
         if (choice == 0) break;
         evaluateChoice(choice);
+        
+        showPlayerStatus();
         
         //check game state
     }
@@ -108,4 +110,14 @@ void Game::evaluateChoice(unsigned short int choice) {
     if (chosenOption != nullptr) {
         chosenOption->Evaluate(player);
     }
+}
+
+void Game::showPlayerStatus() const {
+    //show vital things like location
+    std::cout << "-------Vital Info------" << std::endl;
+    
+    
+    
+    std::cout << 
+    
 }

@@ -80,3 +80,12 @@ void Player::showStats() const {
     std::cout << "Base Defense: " << baseDefense << std::endl;
     std::cout << "Current Location: " << currentLocation->getTitle() << std::endl << std::endl;
 }
+
+void Player::showVitalInfo() const {
+    
+    std::cout << "Level: " << level << std::endl;
+    std::cout << "XP to Level Up: " << expToLvlUp << std::endl;
+    
+    std::cout << "Location: " <<  currentLocation->getTitle() << std::endl;
+    
+}
