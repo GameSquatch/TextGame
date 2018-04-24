@@ -12,7 +12,7 @@ Locations::Locations(std::string title) {
     prev = nullptr;
     next = nullptr;
     this->title = title;
-    //staticOptionsIndex = 0;
+    staticOptionsStartKey = 1;
     
 }
 
@@ -31,14 +31,34 @@ void Locations::addPrevLocation(Locations* prev) {
 }
 
 void Locations::addDynamicOption(Option* option) {
-    dynamicOptions.push_back(option);
+    if (option != nullptr) {
+        dynamicOptions.push_back(option);
+    } else {
+        std::cout << "\nTRIED TO ADD DYNAMIC OPTION NULLPTR" << std::endl;
+    }
+}
+
+void Locations::addStaticOption(Option* option) {
+    if (option != nullptr) {
+        staticOptions[staticOptionsStartKey++] = option;
+    } else {
+        std::cout << "\nTRIED TO ADD STATIC OPTION NULLPTR" << std::endl;
+    }
 }
 
 void Locations::showOptions() const {
     std::cout << "\nOptions\n";
+    unsigned short int i;
+    std::map<unsigned short int, Option*>::const_iterator staticIter;
     
-    for (unsigned short int i = 0; i < dynamicOptions.size(); ++i) {
-        std::cout << (i + 1) << ". " << dynamicOptions[i]->getOutputText() << std::endl;
+    for (staticIter = staticOptions.cbegin(); staticIter != staticOptions.cend(); staticIter++) {
+        Option* option = staticIter->second;
+        std::cout << staticIter->first << ". " << option->getOutputText() << std::endl;
+    }
+    
+    for (i = 0; i < dynamicOptions.size(); ++i) {
+        unsigned short int num = i + staticOptions.size() + 1;
+        std::cout << num << ". " << dynamicOptions[i]->getOutputText() << std::endl;
     }
     
     std::cout << std::endl;
@@ -58,6 +78,7 @@ Locations* Locations::getLocation(MovingDirections direction) {
 }
 
 Option* Locations::getOption(unsigned short int index) {
+    //TODO add for the static options as well
     if (index >= dynamicOptions.size() || index < 0) {
         return nullptr;
     }

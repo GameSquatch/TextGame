@@ -30,6 +30,7 @@ private:
     //array of options
     std::vector<Option*> dynamicOptions;
     //unsigned int staticOptionsStartIndex;
+    std::map<unsigned short int, Option*> staticOptions;
     
     //name of location
     std::string title;
@@ -39,9 +40,14 @@ private:
     Locations* next;
     
 public://member functions
+    //adding locations
     void addNextLocation(Locations* next);
     void addPrevLocation(Locations* prev);
+    //adding options to locations
     void addDynamicOption(Option* option);
+    void addStaticOption(Option* option);
+    unsigned short int staticOptionsStartKey;
+    
     void showOptions() const;
     Locations* getLocation(MovingDirections direction);
     Option* getOption(unsigned short int index);
