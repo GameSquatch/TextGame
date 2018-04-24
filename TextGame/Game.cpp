@@ -116,8 +116,6 @@ void Game::showPlayerStatus() const {
     //show vital things like location
     std::cout << "-------Vital Info------" << std::endl;
     
-    
-    
-    std::cout << 
+    player.showVitalInfo();
     
 }
