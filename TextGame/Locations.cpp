@@ -51,9 +51,12 @@ void Locations::showOptions() const {
     unsigned short int i;
     std::map<unsigned short int, Option*>::const_iterator staticIter;
     
-    for (staticIter = staticOptions.cbegin(); staticIter != staticOptions.cend(); staticIter++) {
-        Option* option = staticIter->second;
-        std::cout << staticIter->first << ". " << option->getOutputText() << std::endl;
+    if (staticOptions.size() > 0) {
+        for (staticIter = staticOptions.cbegin(); staticIter != staticOptions.cend(); staticIter++) {
+            Option* option = staticIter->second;
+            std::cout << staticIter->first << ". " << option->getOutputText() << std::endl;
+            //std::cout << staticIter->first << std::endl;
+        }
     }
     
     for (i = 0; i < dynamicOptions.size(); ++i) {
@@ -79,17 +82,21 @@ Locations* Locations::getLocation(MovingDirections direction) {
 
 Option* Locations::getOption(unsigned short int index) {
 
-    Option* option = nullptr;
     
     if (index < staticOptions.size()) {
-        option = staticOptions[index];
+        //because we start the map at one, we need to add one back to the index for the
+        //static options.
+        return staticOptions[index + 1];
     }
     else if (index >= staticOptions.size() && index < staticOptions.size() + dynamicOptions.size()) {
-        option = dynamicOptions[index];
-        dynamicOptions.erase(dynamicOptions.cbegin() + index);
+        Option* option = dynamicOptions[index];
+        //Since dynamic options is a vector and the elements are shown AFTER the dynamic options,
+        //the index passed is the static options size, so subtract the size
+        dynamicOptions.erase(dynamicOptions.cbegin() + (index - staticOptions.size()));
+        return option;
     }
     else {
         return nullptr;
     }
-    return option;
+
 }
