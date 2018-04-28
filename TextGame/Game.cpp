@@ -35,20 +35,20 @@ void Game::initializeMap() {
     //next location is hills
     hills.addPrevLocation(&farm);
     hills.addNextLocation(&river);
-    hills.addDynamicOption(&moveToPrevOption);
+    hills.addStaticOption(&moveToPrevOption);
     hills.addStaticOption(&moveToNextOption);
 
     
     //next location is river
     river.addPrevLocation(&hills);
     river.addNextLocation(&mountain);
-    river.addDynamicOption(&moveToPrevOption);
-    river.addDynamicOption(&moveToNextOption);
+    river.addStaticOption(&moveToPrevOption);
+    river.addStaticOption(&moveToNextOption);
 
     
     //final location is mountain
     mountain.addPrevLocation(&river);
-    mountain.addDynamicOption(&moveToPrevOption);
+    mountain.addStaticOption(&moveToPrevOption);
 
     
     //give player a location to start in
