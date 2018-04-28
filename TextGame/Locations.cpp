@@ -78,14 +78,18 @@ Locations* Locations::getLocation(MovingDirections direction) {
 }
 
 Option* Locations::getOption(unsigned short int index) {
-    //TODO add for the static options as well
+
+    Option* option = nullptr;
+    
     if (index < staticOptions.size()) {
-        return staticOptions[index];
+        option = staticOptions[index];
     }
     else if (index >= staticOptions.size() && index < staticOptions.size() + dynamicOptions.size()) {
-        return dynamicOptions[index];
+        option = dynamicOptions[index];
+        dynamicOptions.erase(dynamicOptions.cbegin() + index);
     }
     else {
         return nullptr;
     }
+    return option;
 }

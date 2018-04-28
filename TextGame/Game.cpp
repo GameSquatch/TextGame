@@ -30,25 +30,25 @@ void Game::initializeMap() {
     farm.addNextLocation(&hills);
     //FOR FUTURE REFERENCE
     //MOVE OPTIONS SHOULD BE STATIC OPTIONS, NOT DYNAMIC.
-    farm.addDynamicOption(&moveToNextOption);
+    farm.addStaticOption(&moveToNextOption);
     
     //next location is hills
     hills.addPrevLocation(&farm);
     hills.addNextLocation(&river);
     hills.addDynamicOption(&moveToPrevOption);
-    hills.addDynamicOption(&moveToNextOption);
+    hills.addStaticOption(&moveToNextOption);
 
     
     //next location is river
     river.addPrevLocation(&hills);
     river.addNextLocation(&mountain);
     river.addDynamicOption(&moveToPrevOption);
-    river.addDynamicOption(&moveToNextOption);
+    river.addStaticOption(&moveToNextOption);
 
     
     //final location is mountain
     mountain.addPrevLocation(&river);
-    mountain.addDynamicOption(&moveToPrevOption);
+    mountain.addStaticOption(&moveToPrevOption);
 
     
     //give player a location to start in
@@ -61,7 +61,7 @@ void Game::showPlayerStart() {
 
 void Game::runGame() {
     unsigned short int choice = 0;
-    int count = 0;
+    
     while (gameState != Game::EGameState::WON) {
         //show options
         showOptions();
