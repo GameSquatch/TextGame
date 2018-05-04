@@ -8,7 +8,7 @@
 
 #include "XRat.hpp"
 
-XRat::XRat(int level)
+XRat::XRat(unsigned int level)
 : Enemy(level, "XRat")
 {
     

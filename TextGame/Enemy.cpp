@@ -20,18 +20,3 @@ Enemy::Enemy(unsigned int level, std::string name)
 Enemy::~Enemy() {
     
 }
-
-//*********FACTORTY***********//
-
-std::unique_ptr<Enemy> EnemyFactory::createEnemy(EnemyTypes type) {
-    //std::unique_ptr<Enemy> ptr;
-    
-    switch(type) {
-        case EnemyTypes::XRat:
-            return std::unique_ptr<Enemy>(new XRat(1));
-            break;
-        default:
-            return std::unique_ptr<Enemy>();
-    }
-    
-}

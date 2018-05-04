@@ -8,10 +8,10 @@
 
 #ifndef XRat_hpp
 #define XRat_hpp
+#pragma once
 
 #include <iostream>
 #include "Enemy.hpp"
-
 
 class XRat: public Enemy {
 private:
@@ -21,7 +21,7 @@ public:
     
 public:
     virtual ~XRat();
-    XRat(int level);
+    XRat(unsigned int level);
     
 };
 
