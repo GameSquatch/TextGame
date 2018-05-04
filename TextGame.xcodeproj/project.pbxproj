@@ -11,6 +11,7 @@
 		694CC13E2094C7A100B780B9 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694CC13C2094C7A100B780B9 /* Enemy.cpp */; };
 		696E7EB21ED528CB0015B1F1 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 696E7EB01ED528CB0015B1F1 /* Game.cpp */; };
 		696E7EB51ED52C940015B1F1 /* Locations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 696E7EB31ED52C940015B1F1 /* Locations.cpp */; };
+		696F0AF5209BF55C0035DCDE /* XRat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 696F0AF3209BF55C0035DCDE /* XRat.cpp */; };
 		6975E1351ED507F000C01277 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6975E1341ED507F000C01277 /* main.cpp */; };
 		6975E13D1ED5082C00C01277 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6975E13B1ED5082C00C01277 /* Player.cpp */; };
 		69984D90204ECF4E00430C34 /* Option.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69984D8E204ECF4E00430C34 /* Option.cpp */; };
@@ -38,6 +39,8 @@
 		696E7EB11ED528CB0015B1F1 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		696E7EB31ED52C940015B1F1 /* Locations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Locations.cpp; sourceTree = "<group>"; };
 		696E7EB41ED52C940015B1F1 /* Locations.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Locations.hpp; sourceTree = "<group>"; };
+		696F0AF3209BF55C0035DCDE /* XRat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XRat.cpp; sourceTree = "<group>"; };
+		696F0AF4209BF55C0035DCDE /* XRat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = XRat.hpp; sourceTree = "<group>"; };
 		6975E1311ED507F000C01277 /* TextGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TextGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		6975E1341ED507F000C01277 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6975E13B1ED5082C00C01277 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				69A8BC32208AE9B0005F1D66 /* FightEnemiesOption.hpp */,
 				694CC13C2094C7A100B780B9 /* Enemy.cpp */,
 				694CC13D2094C7A100B780B9 /* Enemy.hpp */,
+				696F0AF3209BF55C0035DCDE /* XRat.cpp */,
+				696F0AF4209BF55C0035DCDE /* XRat.hpp */,
 			);
 			path = TextGame;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696F0AF5209BF55C0035DCDE /* XRat.cpp in Sources */,
 				694CC13E2094C7A100B780B9 /* Enemy.cpp in Sources */,
 				696E7EB21ED528CB0015B1F1 /* Game.cpp in Sources */,
 				6975E13D1ED5082C00C01277 /* Player.cpp in Sources */,

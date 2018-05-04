@@ -12,6 +12,15 @@
 
 #include <memory>
 #include <string>
+#include "XRat.hpp"
+
+enum class EnemyTypes {
+    XRat = 0,
+    Swamper,
+    Diggola,
+    Reauve,
+    Spitfire
+};
 
 
 class Enemy {
@@ -30,6 +39,12 @@ public:
     Enemy(unsigned int level, std::string name);
     virtual ~Enemy();
     
+};
+
+
+class EnemyFactory {
+public:
+    static std::unique_ptr<Enemy> createEnemy(EnemyTypes);
 };
 
 
