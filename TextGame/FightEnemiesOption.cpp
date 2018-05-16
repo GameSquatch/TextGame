@@ -17,6 +17,10 @@ FightEnemiesOption::FightEnemiesOption(std::string outputText)
 void FightEnemiesOption::Evaluate(Player& player) {
     Locations* currentLocation = player.getCurrentLocation();
     
-    
+    //std::unique_ptr<Enemy> enemy = currentLocation->pickEnemy();
+    //while (enemy->isAlive() && player.isAlive())
+        //fight them!
+        //if (!enemy->isAlive())
+            //player wins, break
     
 }

@@ -17,7 +17,7 @@ std::unique_ptr<Enemy> EnemyFactory::createEnemy(EnemyTypes type) {
             return std::unique_ptr<Enemy>(new XRat(1));
             break;
         default:
-            return std::unique_ptr<Enemy>();
+            return std::unique_ptr<Enemy>(nullptr);
     }
     
 }
